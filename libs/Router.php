@@ -8,23 +8,25 @@ class Router
     public function __construct()
     {
         
-         define('CTRL','./controller/');
+        define('CTRL','./controller/');
         $url = $this->getUrl();
         if (isset($url[0])) {
             if (file_exists(CTRL . ucfirst(strtolower($url[0]) . 'Controller.php'))) {
                 // controller existe 
                 $this->currentController = ucfirst(strtolower($url[0])) . 'Controller';
+                require_once CTRL.$this->currentController . ".php";
+                $this->currentController = new $this->currentController();
 
                 //gestion methode
                 if (isset($url[1])) {
                     if (method_exists($this->currentController, strtolower($url[1]))) {
                         //methode existe 
                         $this->currentMethod = strtolower($url[1]);
-                        
                         //gestion params
                         if (isset($url[2])) {
                             $this->params = $url[2];
                         }
+                        
                     } 
                     else {  // methode n'existe pas
                         $this->currentController = 'ErrorController';
@@ -37,6 +39,7 @@ class Router
                 else {  // methode non donné
                     die('Donnez la methode');
                 }
+                
 
             }
             else { // controlleur n'existe pas
@@ -46,7 +49,7 @@ class Router
                 require_once CTRL.$this->currentController . ".php";
                 $this->currentController = new $this->currentController();
             }
-
+          
     }
     else{
         // si url n'existe pas
@@ -62,8 +65,8 @@ class Router
     {
         if (isset($_GET['url'])) {
             $url = filter_var($_GET['url'], FILTER_SANITIZE_URL);
-            $url = explode('/', $url);
-            return $url;
+            return $url = explode('/', $url);
+           
         }
     }
 }
