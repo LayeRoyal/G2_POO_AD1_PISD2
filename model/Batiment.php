@@ -1,12 +1,9 @@
 <?php
 
-class Chambre implements IAllocation{
-    private $numeroChambre;
+class Batiment implements IAllocation{
+
     private $numeroBatiment;
-    private $type;
 
-
-  
     public   function __construct($row=null){
         if($row!=null){
             $this->hydrate($row);
@@ -15,10 +12,6 @@ class Chambre implements IAllocation{
     }
    
     public  function hydrate($row){
-       $this->numeroChambre=$row['numeroChambre']; 
        $this->numeroBatiment=$row['numeroBatiment']; 
-       $this->type=$row['type']; 
     }
-    
-
 }

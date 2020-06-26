@@ -21,20 +21,23 @@
         <div class="form-group">
             <label for="bourse">Bourse</label>
             <select name="bourse" id="bourse" class="form-control" onChange="choixBourse(this)">
+                <option value="choix">Choix</option>
                 <option value="Non">Non</option>
                 <option value="Demie">Demie</option>
                 <option value="Entiere">Entiere</option>
             </select>
         </div>
         <div class="form-group" id="generation1">
-            <label for="adresse">Adresse</label>
-            <input type="text" class="form-control" id="adresse" name="adresse">
+          
         </div>
         <div class="form-group" id="generation2">
             
         </div>
-        <button type="submit" class="btn btn-primary" id="btnEnregistrer" name="btnEnregistrer">Enregistrer</button>
+        <div  class="form-group p-4 text-center">
+            <input type="button" value="Enregistrer" class=' -auto p-2 px-4 w-25 rounded bg-primary text-white '>
+        </div>    
     </form>
+    <script src="<?=ROOT?>public/js/enrEtudiant.js"></script>
 
     </div>
 </div>

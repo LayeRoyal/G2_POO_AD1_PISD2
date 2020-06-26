@@ -5,6 +5,7 @@ body{
     width: 30%;
     height: 65%;
 }
+.menu ul a:hover{text-decoration: none;}
 .mid{
     height: 40vw;
     width: 100%;

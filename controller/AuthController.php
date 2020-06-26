@@ -1,17 +1,17 @@
 <?php
 
-class AuthController
+class AuthController extends Controller
 {
     public function __construct()
-    {
-        $this->layout = 'base';
+    {        
+      $this->folder="page";
+      $this->layout="default";
     }
-    public function login()
+    public function connexion()
     {
-        echo 'login';
+        $this->view="connexionForm";
+        $this->render();
+
     }
-    public function admin()
-    {
-        echo 'admin';
-    }
+   
 }

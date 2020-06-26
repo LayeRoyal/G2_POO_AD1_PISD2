@@ -3,11 +3,25 @@
 class Router
 {
     protected $currentController = 'AuthController';
-    protected $currentMethod = "login";
+    protected $currentMethod = "connexion";
     protected $params = [];
     public function __construct()
     {
-        
+        // autoCHARGEMENT
+        spl_autoload_register(function($class){
+            $pathModels="./model/".$class.".php";
+            $pathDao="./dao/".$class.".php";
+            $pathLibs="./libs/".$class.".php";
+            if(file_exists($pathModels)){
+                require_once( $pathModels);
+            }elseif(file_exists($pathDao)){
+                require_once($pathDao); 
+            }elseif(file_exists( $pathLibs)){
+             require_once( $pathLibs); 
+         }     
+         });
+
+
         define('CTRL','./controller/');
         $url = $this->getUrl();
         if (isset($url[0])) {
