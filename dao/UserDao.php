@@ -25,10 +25,5 @@ class UserDao extends Manager{
     
     }
 
-    // public function add($obj){
 
-    // }
-    // public function update($id){
-
-    // }
 }

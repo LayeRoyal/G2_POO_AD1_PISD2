@@ -6,8 +6,8 @@
     <div class="px-4 mt-4 mx-2  p-2">
         <div class="form-group p-2">
             <h4 for="" class="">Numéro Batiment</h4>
-            <select name="numBta" id="numBat" class='form-control text-center'>
-                <option value="001">Choix</option>
+            <select name="numeroBatiment" id="numeroBatiment" class='form-control text-center'>
+                <option value="choix">Choix</option>
                 <option value="001">001</option>
                 <option value="002">002</option>
                 <option value="003">003</option>
@@ -17,17 +17,21 @@
         </div>
         <div  class="form-group p-2">
             <h4 for="" class="">Type de Chambre</h4>
-            <select name="typeCh" id="typeCh" class='form-control text-center'>
-                <option value="001">Choix</option>
-                <option value="001">Individuel</option>
-                <option value="002">À Deux</option>
+            <select name="type" id="type" class='form-control text-center'>
+                <option value="choix">Choix</option>
+                <option value="Individuel">Individuel</option>
+                <option value="Deux">À Deux</option>
             </select>
         </div>
         <div  class="form-group p-4 text-center">
-            <input type="button" value="Enregistrer" class=' -auto p-2 px-4 w-25 rounded bg-primary text-white '>
+            <input type="submit" name="Enregistrer" value="Enregistrer" class=' -auto p-2 px-4 w-25 rounded bg-primary text-white '>
         </div>
         <div  class="form-group text-center">
-            <h4 for="" class="m-0 p-0">Chambre enregistrée avec succes</h4>
-        </div>
+           <?php
+           if(isset($message)){
+            echo $message;
+           }
+           ?>
+    </div>
     </div>
 </div>

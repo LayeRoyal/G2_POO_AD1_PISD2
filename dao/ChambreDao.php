@@ -6,10 +6,9 @@ class ChambreDao extends Manager {
         $this->tableName="chambre";
         $this->className="Chambre";
     } 
-
     public function add($obj){
-    // $numBatiment,$type    $sql="INSERT INTO `$this->tableName` (`numeroChambre`, `numeroBatiment`, `type`) VALUES (NULL, '$numBatiment', '$type') ";
-    //    return $this->executeUpdate($sql)!=0;
+      $sql="INSERT INTO `$this->tableName` (`numeroChambre`, `numeroBatiment`, `type`) VALUES (NULL,'".$obj['numeroBatiment']."', '".$obj['type']."') ";
+       return $this->executeUpdate($sql)!=0;
     }
     public function update($obj){
         // if($type==null && $value1==null)
