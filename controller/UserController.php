@@ -13,7 +13,7 @@ class UserController extends Controller
         if(isset($_POST['Enregistrer'])){
           if($_POST['type']=='choix' || $_POST['numeroBatiment']=='choix')
           {
-           $this->data['message']= '<h4 class="m-0 p-0" text-danger>Veuiller remplir tous les champ!</h4>'; 
+           $this->data['message']= '<h4 class="m-0 p-0 text-danger" >Veuiller remplir tous les champ!</h4>'; 
 
           }
           else{
@@ -37,7 +37,22 @@ class UserController extends Controller
     {
         $this->view="listEtudiant";
         $this->render();
-
+        
+    }
+    public function dataEtudiant()
+    {
+        $this->dao=new DataEtudiantDao();
+       $obj=$this->dao->getLotStudent();
+       $data=[];
+        foreach ($obj as $key => $value) {
+         $data[]=['matricule'=>$value->getMatricule(),
+         'prenom'=>$value->getPrenom(),
+         'nom'=>$value->getNom(),
+         'email'=>$value->getEmail(),
+         'telephone'=>$value->getTelephone()
+        ];
+        }
+        echo json_encode($data);   
     }
     public function listChambre()
     {
@@ -47,6 +62,27 @@ class UserController extends Controller
     }
     public function enrEtudiant()
     {
+      if(isset($_POST['enregistrer'])){
+        if(empty($_POST['prenom']) || empty($_POST['nom']))
+        {
+         $this->data['message']= '<h5 class="m-0 p-0 text-danger" >Veuiller remplir tous les champ!</h5>'; 
+
+        }
+        else{
+          array_pop($_POST);
+          $_POST['matricule']='2020yega011';
+           $this->dao=new EtudiantDao();
+           if($this->dao->add($_POST))
+           {
+            $this->data['message']= '<h5 class="m-0 p-0 text-success" >Etudiant enregistré avec succes!</h5>'; 
+           }
+           else{
+            $this->data['message']= '<h5 class="m-0 p-0 text-danger" >L\'enregistremet a échoué !</h5>'; 
+
+           }
+        }
+
+      }
         $this->view="enrEtudiant";
         $this->render();
 

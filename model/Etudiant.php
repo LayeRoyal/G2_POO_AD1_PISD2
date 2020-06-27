@@ -24,7 +24,7 @@ class Etudiant implements IAllocation{
        $this->prenom=$row['prenom']; 
        $this->email=$row['email']; 
        $this->telephone=$row['telephone']; 
-       $this->date_de_naissance=$row['date_de_naissance']; 
+       $this->date_de_naissance=$row['dateDeNaissanc']; 
        $this->bourse=$row['bourse']; 
 
     }

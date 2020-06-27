@@ -21,4 +21,45 @@ class Chambre implements IAllocation{
     }
     
 
+
+    public function getNumeroChambre()
+    {
+        return $this->numeroChambre;
+    }
+
+    
+    public function setNumeroChambre($numeroChambre)
+    {
+        $this->numeroChambre = $numeroChambre;
+
+        return $this;
+    }
+
+    
+    public function getNumeroBatiment()
+    {
+        return $this->numeroBatiment;
+    }
+
+   
+    public function setNumeroBatiment($numeroBatiment)
+    {
+        $this->numeroBatiment = $numeroBatiment;
+
+        return $this;
+    }
+
+    
+    public function getType()
+    {
+        return $this->type;
+    }
+
+     
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
 }

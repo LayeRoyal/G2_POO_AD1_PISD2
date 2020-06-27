@@ -8,9 +8,9 @@ class EtudiantDao extends Manager{
 
     }
     public function  add($obj){
-        //$matricule,$nom,$prenom,$email,$telephone,$date,$bourse
-    //     $sql="INSERT INTO `$this->tableName` (`matricule`, `nom`, `prenom`,`email`, `telephone`, `dateDeNaissanc`,`bourse`) VALUES ('$matricule','$nom','$prenom','$email','$telephone','$date','$bourse') ";
-    //    return $this->executeUpdate($sql)!=0;
+        extract($obj);
+        $sql="INSERT INTO `$this->tableName` (`matricule`, `nom`, `prenom`,`email`, `telephone`, `dateDeNaissanc`,`bourse`) VALUES ('$matricule','$nom','$prenom','$email','$telephone','$dateDeNaissanc','$bourse') ";
+       return $this->executeUpdate($sql)!=0;
     }
     public function update($obj){
         // if($param2==null && $value1==null)
@@ -23,6 +23,7 @@ class EtudiantDao extends Manager{
         // }
         // return $this->executeUpdate($sql)!=0;
     }
+ 
     public function getStudent($id){
         $sql="select * from $this->tableName where matricule=$id ";
          return  $this->executeSelect($sql);

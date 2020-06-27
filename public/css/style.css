@@ -18,7 +18,7 @@ body{
 .midEtud{
     border: 3px solid black;
     border-radius: 20px;
-    max-height: 32vw;
+    max-height: 30vw;
     overflow: scroll;
     overflow-x: hidden;
 }

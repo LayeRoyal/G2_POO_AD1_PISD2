@@ -9,91 +9,22 @@
         </div>
     </div>
 
-    <div class="midEtud px-4 mt-4 mx-4">
-    <table class="table" >
-  <thead>
-    <tr>
-      <th scope="col">Prénom</th>
-      <th scope="col">Nom</th>
-      <th scope="col">Téléphone</th>
-      <th scope="col">Chambre</th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Abdoulaye</td>
-      <td>DRAME</td>
-      <td>77475224</td>
-      <td>0010001</td>
-      <td><img src="../public/img/edit.png" alt="edit" class='mr-4'><img src="../public/img/delete.png" alt="delete"></td>
-    </tr>
-    <tr>
-      <td>Abdoulaye</td>
-      <td>DRAME</td>
-      <td>77475224</td>
-      <td>0010001</td>
-      <td><img src="../public/img/edit.png" alt="edit" class='mr-4'><img src="../public/img/delete.png" alt="delete"></td>
-    </tr>
-    <tr>
-      <td>Abdoulaye</td>
-      <td>DRAME</td>
-      <td>77475224</td>
-      <td>0010001</td>
-      <td><img src="../public/img/edit.png" alt="edit" class='mr-4'><img src="../public/img/delete.png" alt="delete"></td>
-    </tr>
-    <tr>
-      <td>Abdoulaye</td>
-      <td>DRAME</td>
-      <td>77475224</td>
-      <td>0010001</td>
-      <td><img src="../public/img/edit.png" alt="edit" class='mr-4'><img src="../public/img/delete.png" alt="delete"></td>
-    </tr>
-    <tr>
-      <td>Abdoulaye</td>
-      <td>DRAME</td>
-      <td>77475224</td>
-      <td>0010001</td>
-      <td><img src="../public/img/edit.png" alt="edit" class='mr-4'><img src="../public/img/delete.png" alt="delete"></td>
-    </tr>
-    <tr>
-      <td>Abdoulaye</td>
-      <td>DRAME</td>
-      <td>77475224</td>
-      <td>0010001</td>
-      <td><img src="../public/img/edit.png" alt="edit" class='mr-4'><img src="../public/img/delete.png" alt="delete"></td>
-    </tr>
-    <tr>
-      <td>Abdoulaye</td>
-      <td>DRAME</td>
-      <td>77475224</td>
-      <td>0010001</td>
-      <td><img src="../public/img/edit.png" alt="edit" class='mr-4'><img src="../public/img/delete.png" alt="delete"></td>
-    </tr>
-    <tr>
-      <td>Abdoulaye</td>
-      <td>DRAME</td>
-      <td>77475224</td>
-      <td>0010001</td>
-      <td><img src="../public/img/edit.png" alt="edit" class='mr-4'><img src="../public/img/delete.png" alt="delete"></td>
-    </tr>
-    <tr>
-      <td>Abdoulaye</td>
-      <td>DRAME</td>
-      <td>77475224</td>
-      <td>0010001</td>
-      <td><img src="../public/img/edit.png" alt="edit" class='mr-4'><img src="../public/img/delete.png" alt="delete"></td>
-    </tr>
-    <tr>
-      <td>Abdoulaye</td>
-      <td>DRAME</td>
-      <td>77475224</td>
-      <td>0010001</td>
-      <td><img src="../public/img/edit.png" alt="edit" class='mr-4'><img src="../public/img/delete.png" alt="delete"></td>
-    </tr>
+    <div class="midEtud px-4 mt-4 mx-4" id="Zone">
   
-  </tbody>
-</table>
-
+     <table class="table" >
+      <thead>
+        <tr>
+        <th scope="col">Matricule</th>
+          <th scope="col">Prénom</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Téléphone</th>
+          <th scope="col">Email</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody id="ScrollZone">
+      </tbody>
+    </table>
     </div>
 </div>
+<script src="http://localhost/G2_POO_AD1_PISD2/public/js/listEtudiant.js"></script>

@@ -15,8 +15,12 @@
             <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
         </div>
         <div class="form-group">
-            <label for="date_naissance">Date de Naissance</label>
-            <input type="date" class="form-control" id="date_naissance" name="date_naissance">
+            <label for="Telephone">Telephone</label>
+            <input type="number" class="form-control" id="telephone" name="telephone">
+        </div>
+        <div class="form-group">
+            <label for="dateDeNaissanc">Date de Naissance</label>
+            <input type="date" class="form-control" id="dateDeNaissanc" name="dateDeNaissanc">
         </div>
         <div class="form-group">
             <label for="bourse">Bourse</label>
@@ -34,10 +38,17 @@
             
         </div>
         <div  class="form-group p-4 text-center">
-            <input type="button" value="Enregistrer" class=' -auto p-2 px-4 w-25 rounded bg-primary text-white '>
+            <input type="submit" name="enregistrer" value="Enregistrer" class=' -auto p-2 px-4 w-25 rounded bg-primary text-white '>
         </div>    
     </form>
     <script src="<?=ROOT?>public/js/enrEtudiant.js"></script>
 
     </div>
 </div>
+<div  class="form-group pt-2 text-center">
+           <?php
+           if(isset($message)){
+            echo $message;
+           }
+           ?>
+    </div>
