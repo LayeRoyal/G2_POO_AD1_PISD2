@@ -73,7 +73,8 @@ class UserController extends Controller
          'prenom'=>$value->getPrenom(),
          'nom'=>$value->getNom(),
          'email'=>$value->getEmail(),
-         'telephone'=>$value->getTelephone()
+         'telephone'=>$value->getTelephone(),
+         'bourse'=>$value->getBourse()
         ];
         }
         echo json_encode($data);   
