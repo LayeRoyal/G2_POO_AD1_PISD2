@@ -4,8 +4,8 @@
             <h3>Liste des Etudiants</h3>
         </div>
         <div class="col-4 d-flex">
-            <input type="text" placeholder="chercher etudiant" class="mx-4">
-            <img src="../public/img/search.png" alt="search" class="search" >
+            <input type="text" placeholder="chercher etudiant" class="mx-2">
+            <img src="<?=ROOT?>public/img/search.png" alt="search" class="search" >
         </div>
     </div>
 
@@ -27,4 +27,5 @@
     </table>
     </div>
 </div>
-<script src="http://localhost/G2_POO_AD1_PISD2/public/js/listEtudiant.js"></script>
+
+<script src="<?=ROOT?>public/js/listEtudiant.js"></script>

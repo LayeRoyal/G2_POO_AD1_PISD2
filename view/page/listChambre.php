@@ -15,13 +15,13 @@
                     <td>0010001</td>
                     <td>001</td>
                     <td>Individuel</td>
-                    <td><img src="../public/img/edit.png" alt="edit" class='mr-4'><img src="../public/img/delete.png" alt="delete"></td>
+                    <td><img src="<?=ROOT?>public/img/edit.png" alt="edit" class='mr-4'><img src="<?=ROOT?>public/img/delete.png" alt="delete"></td>
                 </tr>
                 <tr>
                     <td>0010001</td>
                     <td>001</td>
                     <td>Individuel</td>
-                    <td><img src="../public/img/edit.png" alt="edit" class='mr-4'><img src="../public/img/delete.png" alt="delete"></td>
+                    <td><img src="<?=ROOT?>public/img/edit.png" alt="edit" class='mr-4'><img src="<?=ROOT?>public/img/delete.png" alt="delete"></td>
                 </tr>
             </tbody>
         </table>

@@ -34,9 +34,30 @@ class UserController extends Controller
         $this->render();
     }
     public function listEtudiant()
-    {
+    {   
         $this->view="listEtudiant";
         $this->render();
+        if(isset($_POST['submit'])){
+          if($_POST['bourse']=='' || $_POST['nom']=='' || $_POST['prenom']=='' || $_POST['telephone']=='' || $_POST['email']=='')
+          {
+           $this->data['message']= '<h4 class="m-0 p-0 text-danger" >Veuiller remplir tous les champ!</h4>'; 
+          }
+          else{
+            $this->dao=new EtudiantDao();
+            $this->dao->update($_POST);
+           
+             
+            
+
+
+          }
+        }
+
+
+        if(isset($_POST['delete'])){
+         var_dump($_POST);
+        }
+        
         
     }
     public function dataEtudiant()

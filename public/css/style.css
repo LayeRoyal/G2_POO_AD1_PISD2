@@ -23,7 +23,7 @@ body{
     overflow-x: hidden;
 }
 
-.search{
+.search,.modsup{
     cursor: pointer;
 }
 

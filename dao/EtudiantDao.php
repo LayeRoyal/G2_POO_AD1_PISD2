@@ -13,15 +13,10 @@ class EtudiantDao extends Manager{
        return $this->executeUpdate($sql)!=0;
     }
     public function update($obj){
-        // if($param2==null && $value1==null)
-        // {
-        //     $sql="UPDATE `$this->tableName` SET `$param1` = '$value' WHERE `$this->tableName`.`numeroChambre` = $matricule;";
-        // }
-        // else{
-        //     $sql="UPDATE `$this->tableName` SET `$param1` = '$value',`$param2` = '$value1' WHERE `$this->tableName`.`numeroChambre` = $matricule;";
-        //$matricule,$param1,$value,$param2=null,$value1=null
-        // }
-        // return $this->executeUpdate($sql)!=0;
+        extract($obj);
+   $sql="UPDATE `$this->tableName` SET `$this->tableName`.`prenom` = '$prenom', `$this->tableName`.`nom` = '$nom', `$this->tableName`.`email` = '$email', `$this->tableName`.`telephone` = '$telephone' WHERE `$this->tableName`.`matricule` = '$submit';";
+
+    return $this->executeUpdate($sql)!=0;
     }
  
     public function getStudent($id){
