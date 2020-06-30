@@ -60,7 +60,7 @@ public function getSingle($id){
 }
 
 public function delete($id){
-    $sql="DELETE from `$this->tableName` where `$this->tableName`.`matricule`=\'$id\'";
+    $sql="DELETE from `$this->tableName` where `$this->tableName`.`matricule`='$id'";
     return $this->executeUpdate($sql)!=0;
 }
 

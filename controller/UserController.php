@@ -37,6 +37,8 @@ class UserController extends Controller
     {   
         $this->view="listEtudiant";
         $this->render();
+
+         //update etudiant
         if(isset($_POST['submit'])){
           if($_POST['bourse']=='' || $_POST['nom']=='' || $_POST['prenom']=='' || $_POST['telephone']=='' || $_POST['email']=='')
           {
@@ -53,9 +55,10 @@ class UserController extends Controller
           }
         }
 
-
+          //delete etudiant
         if(isset($_POST['delete'])){
-         var_dump($_POST);
+          $this->dao=new EtudiantDao();
+          $this->dao->delete($_POST['delete']);
         }
         
         
